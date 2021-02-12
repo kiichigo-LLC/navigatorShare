@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navigator.share() / スマホの共有メニューをHTMLから操作</title>
+  <link rel="stylesheet" href="prism.css">
+  
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 16px;
+      text-align: center;
+      background: #eee;
+    }
+    blockquote {
+      text-align: justify;
+      padding: 16px;
+      margin: 0 auto;
+      display: block;
+      max-width: 600px;
+      box-sizing: border-box;
+      line-height: 2.0;
+      background: #fff;
+      font-size: 14px;
+    }
+    .box {
+      padding: 40px;
+      margin: 40px auto;
+      box-sizing: border-box;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    .box-main {
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    .share-button {
+      cursor: pointer;
+      background: #ff0348;
+      padding: 16px 24px;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .share-button:hover {
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>navigator.share()を使ったサンプル</h1>
+    <blockquote>
+      ・スマホの場合は「共有メニュー」を開く<br>
+      ・PCの場合は「指定したURL」をコピーし、「指定した文言」にテキストを入れ替える
+    </blockquote>
+  </header>
+
+  <article>
+    <section>
+
+      <div class="box">
+
+        <div class="box-main">
+          <a type="button" class="share-button" disabled=""
+            data-share-title="ここにタイトルを入れる" 
+            data-share-text="ここにテキストを入れる"
+            data-share-url="ここに指定したいURLを入れる"
+            data-share-done="ここに指定したい文言を入れる">
+            このボタンを押してみて！
+          </a>
+        </div>
+
+      </div>
+
+      <pre class="line-numbers">
+                <code class="language-html"> 
+                  <a type="button" class="share-button" disabled="" data-share-title="ここにタイトルを入れる" data-share-text="ここにテキストを入れる"
+                    data-share-url="ここに指定したいURLを入れる" data-share-done="ここに指定したい文言を入れる">
+                    このボタンを押してみて！
+                  </a>
+                </code>
+              </pre>
+              
+    </section>
+  </article>
+
+
+  <script src="https://kiichigo.work/wp/wp-content/themes/main/js/prism.js"></script>
+  <script src="./navigatorShare.js"></script>
+</body>
+</html>
